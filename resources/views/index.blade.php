@@ -52,7 +52,7 @@
                             <a href="{{route('apartamento.editar', $duenio->idDuenio)}}">Editar</a>
                         </td>
                         <td>
-                            <a href="">Eliminar</a>
+                            <a href="{{route('apartamento.eliminar1', $duenio->idDuenio)}}">Eliminar</a>
                         </td>
                     </tr>
                 @endforeach
@@ -99,7 +99,7 @@
                             <a href="{{route('apartamento.editar2', $propiedad->id)}}">Editar</a>
                         </td>
                         <td>
-                            <a href="">Eliminar</a>
+                            <a href="{{route('apartamento.eliminar2', $propiedad->id)}}">Eliminar</a>
                         </td>
                     </tr>
                 @endforeach

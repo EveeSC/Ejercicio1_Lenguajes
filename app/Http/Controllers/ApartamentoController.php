@@ -7,7 +7,7 @@ use App\Models\Duenio;
 use App\Models\Propiedad;
 
 const PRECIO_BASE = 1500;
-const VALOR_AUMENTO= 0.1;
+const VALOR_AUMENTO= 0.001;
 
 class ApartamentoController extends Controller
 {
@@ -111,8 +111,31 @@ class ApartamentoController extends Controller
         $nvaPropiedad->save();
         return redirect('/');
     }
+
+    public function eliminar1(Request $request, $idDuenio){
+        $duenioEliminar = Duenio::find($idDuenio);
+        return view ('eliminarDuenio', compact('duenioEliminar'));
+    }
+
+    public function destroy1($idDuenio){
+        $duenio=Duenio::find($idDuenio);
+        $duenio->delete();
+        return redirect('/');
+    }
+
+    public function eliminar2(Request $request, $idPropiedad){
+        $propiedadEliminar = Propiedad::find($idPropiedad);
+        return view ('eliminarPropiedad', compact('propiedadEliminar'));
+    }
+
+    public function destroy2($idPropiedad){
+        $propiedad=Propiedad::find($idPropiedad);
+        $propiedad->delete();
+        return redirect('/');
+    }
+
+
+
+    
 }
 
-//porque aveces solo se tiene la esperanza de que no acabara asi, y deseas y deaseas y piensas que por desearlo deberias tenerlo 
-//pero no es asi cuando se trata de otra persona, como puedo esperar y desear algo que no sea desde mi propio corazon y con mi propia voluntad
-//es imposible creer que deseandolo se hará realidad cuando no dependen de mi, yo deseé pero incluso si me lo imagino es irrealista la idea de tener un final feliz

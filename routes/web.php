@@ -33,3 +33,8 @@ Route::put('/apartamentos/tabla-duenios/actualizar/{idDuenio}', [ApartamentoCont
 
 Route::get('/apartamentos/tabla-propiedades/editar2/{id}',[ApartamentoController::class, 'editar2'])->name('apartamento.editar2');
 Route::put('/apartamentos/tabla-propiedades/actualizar2/{id}', [ApartamentoController::class, 'actualizarPropiedad'])->name('apartamento.actualizarPropiedad');
+
+Route::get('/apartamentos/tabla-duenios/eliminar1/{idDuenio}', [ApartamentoController::class, 'eliminar1'])->name('apartamento.eliminar1');
+Route::get('/apartamentos/tabla-duenios/eliminar2/{idPropiedad}', [ApartamentoController::class, 'eliminar2'])->name('apartamento.eliminar2');
+Route::get('/apartamentos/tabla-duenios/eliminar1/destroy1/{idDuenio}', [ApartamentoController::class, 'destroy1'])->name('apartamento.destroy1');
+Route::get('/apartamentos/tabla-duenios/eliminar2/destroy2/{idPropiedad}', [ApartamentoController::class, 'destroy2'])->name('apartamento.destroy2');
